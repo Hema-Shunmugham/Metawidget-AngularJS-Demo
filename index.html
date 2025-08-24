@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en" ng-app="app">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Metawidget × AngularJS (1.x)</title>
+    <!--Without that AngularJS there’s no window.angular -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.3/angular.min.js"></script>
+    <!-- Metawidget browser bundles - Need to have this locally, because metawidget.org not accesseible,
+     also for better Caching & bundling control, Version stability, Security / compliance-->
+    <script src="lib/metawidget-core.min.js" type="text/javascript"></script>
+    <script src="lib/metawidget-angular.min.js" type="text/javascript"></script>
+    <!-- App specific CSS & JS -->
+    <link rel="stylesheet" href="style.css" />
+    <script src="app.js"></script>
+    <script src="index.js"></script>
+</head>
+<body ng-controller="AppCtrl">
+<div class="app">
+    <h1>Metawidget × AngularJS (1.x)</h1>
+    <div class="card" style="margin-bottom:16px">
+        <!-- Single form: everything (person + children) comes from personConfig -->
+        <metawidget ng-model="person" config="personConfig"></metawidget>
+        <div class="row" style="margin-top:12px; align-items:center">
+            <!-- Save only depends on overall validity -->
+            <button ng-click="save()" ng-disabled="!isValid()">💾 Save</button>
+            <span style="flex:1"></span>
+            <a class="link" href="#" ng-click="reset()">Reset demo data</a>
+        </div>
+    </div>
+   <!--Instantly see what your model looks like without opening the console. -->
+    <div class="card">
+        <strong>Live model preview</strong>
+        <pre class="json">{{ person | json:2 }}</pre>
+    </div>
+</div>
+</body>
+</html>

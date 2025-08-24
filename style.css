@@ -1,0 +1,15 @@
+html, body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; }
+body { margin: 0; padding: 24px; background: #0b1220; color: #f7f7f8; }
+.app { max-width: 900px; margin: 0 auto; }
+h1 { font-size: 22px; margin: 0 0 16px; }
+.card { background: #111827; border: 1px solid #1f2937; border-radius: 16px; padding: 18px; box-shadow: 0 8px 24px rgba(0,0,0,.25); }
+.row { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; }
+.row > * { margin: 8px 0; }
+button { border: 0; padding: 10px 14px; border-radius: 10px; background: #3843ff; color: white; cursor: pointer; font-weight: 600; }
+button.alt { background: #374151; }
+button:disabled { opacity: .5; cursor: not-allowed; }
+metawidget table { width: 100%; border-collapse: collapse; }
+metawidget table th, metawidget table td { border-bottom: 1px solid #1f2937; padding: 8px; text-align: left; }
+metawidget label { display: inline-block; min-width: 160px; margin-right: 8px; font-weight: 600; }
+.json { white-space: pre-wrap; background: #0f172a; border: 1px solid #1f2937; padding: 12px; border-radius: 12px; }
+a.link { color: #9ca3af; text-decoration: underline; }

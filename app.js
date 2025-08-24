@@ -1,6 +1,6 @@
 angular.module('app', ['metawidget']).controller('AppCtrl', function($scope, $http) {
 
-    // Seed model (children starts with one empty child so fields render)
+    // Person object
     function personSchema() {
         return {
             firstname: '',

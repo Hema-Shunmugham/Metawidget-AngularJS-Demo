@@ -2,9 +2,10 @@
 <html lang="en" ng-app="app">
 <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Metawidget × AngularJS (1.x)</title>
-    <!--Without that AngularJS there’s no window.angular -->
+    <!--Metawidget Angular bindings depend on AngularJS core framework.
+        Metawidget integration registers itself as an AngularJS module and expects Angular to already exist-->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.3/angular.min.js"></script>
     <!-- Metawidget browser bundles - Need to have this locally, because metawidget.org not accesseible,
      also for better Caching & bundling control, Version stability, Security / compliance-->
